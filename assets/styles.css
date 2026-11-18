@@ -7,7 +7,7 @@
   --blue: #315f8d;
   --line: #e6e9ed;
   --page-width: 1080px;
-  --nav-pencil-opacity: .68;
+  --nav-pencil-opacity: .78;
   --margin-pencil-opacity: .5;
   --serif: 'Noto Serif', 'Dongsheng Sans SC', 'PingFang SC', 'Microsoft YaHei', Georgia, serif;
 }
@@ -221,12 +221,12 @@ button:focus-visible, a:focus-visible {
 .nav-doodle {
   position: absolute;
   z-index: 0;
-  top: calc(8px + .72em);
+  top: calc(8px + .45em);
   left: 50%;
   transform: translateX(-50%);
   display: block;
   width: calc(100% + 8px);
-  height: 12px;
+  height: 18px;
   object-fit: fill;
   pointer-events: none;
   opacity: var(--nav-pencil-opacity);
@@ -273,7 +273,7 @@ button:focus-visible, a:focus-visible {
   bottom: 96px;
   width: 128px;
   height: 43px;
-  background: url("margin-sketch.svg?v=20261118-pencil-6") center / contain no-repeat;
+  background: url("margin-sketch.svg?v=20261118-pencil-7") center / contain no-repeat;
   opacity: var(--margin-pencil-opacity);
   pointer-events: none;
 }
@@ -509,7 +509,7 @@ html[lang="zh-CN"] .introduction p, html[lang="zh-CN"] .article-section p, html[
   }
 
   .nav-doodle {
-    height: 11px;
+    height: 16px;
   }
 
   .language-switch {
