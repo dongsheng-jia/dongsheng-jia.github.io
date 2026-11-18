@@ -40,7 +40,7 @@ h1 { font: 400 32px/1.25 var(--serif); letter-spacing: 0; }
 .introduction p { color: var(--body); font-size: 19px; line-height: 1.65; }
 .institution { color: var(--ink); }
 .introduction p + p { margin-top: 18px; }
-.introduction a { text-decoration-color: #a5b6c7; }
+.introduction a { text-decoration-color: #a5b6c7; white-space: nowrap; }
 .introduction a:hover { text-decoration-color: currentColor; }
 .portrait { width: 100%; margin: 0; }
 .portrait img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; }
