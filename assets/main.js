@@ -17,7 +17,7 @@
     document.querySelector('meta[name="description"]').content = descriptions[language];
     document.querySelector('meta[property="og:title"]').content = titles[language];
     document.querySelector('meta[property="og:description"]').content = descriptions[language];
-    document.querySelector('.portrait img').alt = language === 'en' ? 'Crayon portrait of Dongsheng Jia' : '贾东升的蜡笔风格头像';
+    document.querySelector('.portrait img').alt = language === 'en' ? 'Pencil portrait of Dongsheng Jia' : '贾东升的铅笔素描头像';
     document.querySelector('.language-switch').setAttribute('aria-label', language === 'en' ? 'Language' : '语言');
     try { localStorage.setItem(key, language); } catch { /* Optional preference storage. */ }
   }
@@ -28,3 +28,4 @@
   const language = requested === 'zh' ? 'zh-CN' : requested;
   setLanguage(Object.hasOwn(titles, language || '') ? language : Object.hasOwn(titles, saved || '') ? saved : 'en');
 })();
+

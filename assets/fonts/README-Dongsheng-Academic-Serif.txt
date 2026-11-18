@@ -13,6 +13,8 @@ PostScript name: DongshengAcademicSerif-Regular
 Changes:
 - Retained the non-ASCII characters appearing in the visible text of
   index.html and in assets/main.js (including alternate text and strings).
+- Extended the retained character set with 邮箱：铅笔素描头像 for the email
+  label and updated portrait alternate text; all previous characters remain.
 - Converted the subset to WOFF2 for local web delivery.
 - Renamed the family, full, unique, PostScript, typographic, and CFF font
   names to distinguish this derivative from the original Noto family.
@@ -24,9 +26,9 @@ The original Noto CJK copyright notice and complete OFL license are retained
 alongside the fonts in this repository. The original authors do not provide
 support for this page-specific subset.
 
-Coverage: 77 Unicode characters:
-©·、。上与业东中为主之供信像关兴冯副包升博商国士大头学宏导师应我括授教文是术格正注济海玲生的研究笔系经老联至蜡融行要观言语财贷贾资趣跳金银链间际院页风，
+Coverage: 83 Unicode characters:
+©·、。上与业东中为主之供信像关兴冯副包升博商国士大头学宏导师应我括授描教文是术格正注济海玲生的研究笔箱系素经老联至蜡融行要观言语财贷贾资趣跳邮金铅银链间际院页风，：
 
-Input SHA-256 at conversion:
+Original input SHA-256 before the character-set extension:
 index.html: fcf0b419ae4aef2f859a1f13b1f18263462c81796d8b135aa405c1807d77470e
 assets/main.js: 7c3e71b25814ddc03e7957ac1ad4363c237761b5d0d3641178980a1e0411c674

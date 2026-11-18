@@ -1,6 +1,6 @@
 @font-face { font-family: 'Latin Modern Roman'; src: url('fonts/latin-modern-roman-regular.woff2') format('woff2'); font-style: normal; font-weight: 400; font-display: swap; }
 @font-face { font-family: 'Latin Modern Roman'; src: url('fonts/latin-modern-roman-bold.woff2') format('woff2'); font-style: normal; font-weight: 700; font-display: swap; }
-@font-face { font-family: 'Dongsheng Academic Serif'; src: url('fonts/dongsheng-academic-serif-sc.woff2') format('woff2'); font-style: normal; font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Dongsheng Academic Serif'; src: url('fonts/dongsheng-academic-serif-sc.woff2?v=20261118-email') format('woff2'); font-style: normal; font-weight: 400; font-display: swap; }
 :root {
   --paper: #fff;
   --ink: #253345;
@@ -21,10 +21,14 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--blue); outline-
 ::selection { background: #e6efff; color: var(--ink); }
 .skip-link { position: fixed; top: -80px; left: 20px; background: var(--paper); padding: 10px 16px; z-index: 10; }
 .skip-link:focus { top: 14px; }
-.page { width: min(980px, calc(100% - 96px)); margin-inline: auto; min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; }
+.page { position: relative; isolation: isolate; width: min(980px, calc(100% - 96px)); margin-inline: auto; min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; }
+.page::before, .page::after { content: ''; position: absolute; z-index: -1; pointer-events: none; background-image: url('pencil-accents.svg'); background-repeat: no-repeat; background-size: 100% 200%; }
+.page::before { top: 112px; left: -24px; width: 168px; height: 56px; background-position: center top; opacity: .34; transform: rotate(-5deg); }
+.page::after { right: -22px; bottom: 100px; width: 150px; height: 50px; background-position: center bottom; opacity: .3; transform: rotate(6deg); }
 
 .site-header { height: 86px; flex: none; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; }
 .site-label { font-size: 15px; font-weight: 400; line-height: 1.4; color: var(--muted); }
+.site-mark { color: var(--ink); font: 400 18px/1.4 var(--serif); font-style: normal; letter-spacing: 1px; }
 .language-switch { display: inline-flex; align-items: center; gap: 4px; }
 .language-switch button { padding: 6px 7px; min-width: 36px; min-height: 44px; border: none; background: transparent; font-size: 14px; color: var(--muted); }
 .language-switch button[aria-pressed="true"] { color: var(--blue); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 5px; }
@@ -42,6 +46,8 @@ h1 { font: 400 32px/1.25 var(--serif); letter-spacing: 0; }
 .introduction p + p { margin-top: 18px; }
 .introduction a { text-decoration-color: #a5b6c7; white-space: nowrap; }
 .introduction a:hover { text-decoration-color: currentColor; }
+.contact { margin-top: 22px; color: var(--body); font-size: 18px; line-height: 1.65; }
+.contact .email-address { white-space: normal; overflow-wrap: anywhere; }
 .portrait { width: 100%; margin: 0; }
 .portrait img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; }
 .site-footer { border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 18px; padding: 22px 0 27px; font-size: 12px; line-height: 1.5; color: var(--muted); }
@@ -58,6 +64,8 @@ html[lang="zh-CN"] .introduction p { font-size: 18px; line-height: 1.85; }
 }
 @media (max-width: 680px) {
   .page { width: calc(100% - 40px); }
+  .page::before { top: 82px; left: -6px; width: 120px; height: 40px; opacity: .22; }
+  .page::after { display: none; }
   .site-header { height: 70px; }
   .site-label { font-size: 14px; }
   .language-switch { gap: 1px; }
@@ -71,12 +79,14 @@ html[lang="zh-CN"] .introduction p { font-size: 18px; line-height: 1.85; }
   .introduction { margin-top: 22px; }
   .introduction p { font-size: 18px; line-height: 1.65; }
   .introduction p + p { margin-top: 17px; }
+  .contact { font-size: 17px; }
   .site-footer { padding: 20px 0 24px; font-size: 11px; }
   html[lang="zh-CN"] h1 { font-size: 28px; }
   html[lang="zh-CN"] .introduction p { font-size: 17px; }
 }
 @media print {
   .page { width: 100%; min-height: 0; }
+  .page::before, .page::after { display: none; }
   .language-switch { display: none; }
   .site-header { height: 55px; }
   main { padding: 32px 0; }
