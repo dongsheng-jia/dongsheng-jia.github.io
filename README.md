@@ -17,6 +17,7 @@ GitHub Pages can publish these files directly from the repository root. Keep `.n
 
 ## 字体许可 / Font licenses
 
-Third-party font licenses and copyright notices are included in `assets/fonts/`. Instrument Serif and Inter use the SIL Open Font License 1.1. Dongsheng Serif and Dongsheng Sans are renamed, content-specific subsets of Noto CJK; their original copyright and OFL are preserved.
+The current design uses Latin Modern Roman for a plain, LaTeX-like reading style, with a content-specific Noto Serif CJK subset named Dongsheng Academic Serif for Chinese. Applicable font licenses and copyright notices are included in `assets/fonts/`. Earlier font assets remain available but are not used by the current stylesheet.
 
 中文字体已按当前页面内容做子集化。新增未收录汉字会由后备字体显示；如需完全一致的字形，可更新相应字体子集。
+
