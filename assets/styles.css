@@ -120,3 +120,21 @@ html[lang="zh-CN"] .article-section p, html[lang="zh-CN"] .article-lead { font-s
   .portrait { width: 220px; }
 }
 
+
+/* Hand-drawn portrait mark, quieter typography, and roomy desktop layout. */
+.page { width: min(1080px, calc(100% - 96px)); }
+.site-mark { display: inline-flex; width: 43px; height: 43px; border: 1px solid #e7e8e8; border-radius: 50%; overflow: hidden; align-items: center; justify-content: center; background: #fffaf6; vertical-align: middle; }
+.site-mark img { display: block; width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+.profile { grid-template-columns: minmax(0, 1fr) 285px; gap: 68px; }
+.introduction { max-width: 665px; }
+.introduction p { font-size: 18px; line-height: 1.7; }
+.contact { font-size: 17px; }
+.article-page { max-width: 810px; }
+.article-section p, .article-lead { font-size: 18px; }
+.article-section::after { content: ''; display: block; width: 255px; height: 68px; background-repeat: no-repeat; background-position: left center; background-size: contain; opacity: .92; margin-top: 14px; }
+body[data-page="research"] .article-section::after { background-image: url('research-doodle.svg'); }
+body[data-page="idea"] .article-page::after { content: ''; display: block; width: 270px; height: 76px; background: url('idea-doodle.svg') left center / contain no-repeat; margin-top: 14px; }
+html[lang="zh-CN"] .introduction p { font-size: 17.5px; }
+html[lang="zh-CN"] .article-section p, html[lang="zh-CN"] .article-lead { font-size: 17.5px; }
+@media (max-width: 900px) { .page { width: calc(100% - 64px); } .profile { grid-template-columns: minmax(0,1fr) 220px; gap: 36px; } .introduction p { font-size: 17.5px; } }
+@media (max-width: 680px) { .page { width: calc(100% - 40px); } .site-mark { width: 37px; height: 37px; } .profile { display: flex; flex-direction: column-reverse; gap: 26px; } .introduction p { font-size: 17px; } .article-section p, .article-lead { font-size: 17px; } .article-section::after { width: 210px; height: 55px; } .site-header { gap: 10px; } html[lang="zh-CN"] .introduction p, html[lang="zh-CN"] .article-section p, html[lang="zh-CN"] .article-lead { font-size: 17px; } }
