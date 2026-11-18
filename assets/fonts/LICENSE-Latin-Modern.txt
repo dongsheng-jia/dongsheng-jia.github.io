@@ -4,6 +4,7 @@ Latin Modern Roman webfont distribution
 Files in this distribution:
 - latin-modern-roman-regular.woff2, converted from lmroman12-regular.otf
 - latin-modern-roman-bold.woff2, converted from lmroman12-bold.otf
+- latin-modern-roman-italic.woff2, converted from lmroman12-italic.otf
 
 Conversion notice:
 These files are WOFF2 container conversions of the Latin Modern Roman 12
