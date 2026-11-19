@@ -1,42 +1,126 @@
-# Dongsheng Jia · 贾东升
+# Dongsheng Jia · 贾东升 — Academic Homepage
 
-主页：<https://dongsheng-jia.github.io/>
+Live site: <https://dongsheng-jia.github.io/>  
+Repository: <https://github.com/dongsheng-jia/dongsheng-jia.github.io>  
+Default branch: `main` · Hosting: GitHub Pages
 
-这是一个中英文双语的静态学术主页。直接编辑 HTML、CSS 和 JavaScript 即可维护，不需要安装依赖或执行构建命令。GitHub Pages 从仓库根目录发布；请保留根目录的 `.nojekyll`。
+This repository contains the source files for a bilingual (English / Simplified Chinese) academic homepage. It is a lightweight static website: **there is no package manager, build step, framework, or server-side application**. GitHub Pages publishes the files directly from the repository root.
 
-## 文件在哪里
+> **Important privacy note:** this repository is currently **PUBLIC**. Anyone can view and download its source code and public assets. The published website is also public. Do not put passwords, API keys, private documents, unpublished confidential data, or personal information here that you do not want exposed.
 
-| 要修改的内容 | 对应文件 |
+---
+
+## 1. Repository map
+
+```text
+/
+├── index.html                 # Home page
+├── research/
+│   └── index.html             # Research, publications and projects
+├── idea/
+│   └── index.html             # Ideas / notes page
+├── assets/
+│   ├── styles.css             # Shared design system and responsive styles
+│   ├── main.js                # Language switch, page metadata and shared behavior
+│   ├── avatar-crayon.webp     # Small round header avatar
+│   ├── portrait-sketch.webp   # Larger portrait used in page content
+│   ├── favicon-crayon.svg     # Browser tab icon (SVG)
+│   ├── favicon-crayon-48.png  # Browser tab icon (PNG)
+│   ├── nav-home.svg           # Subtle hand-drawn stroke under Home
+│   ├── nav-research.svg       # Subtle hand-drawn stroke under Research
+│   ├── nav-idea.svg           # Subtle hand-drawn stroke under Idea?
+│   ├── margin-sketch.svg      # Very light page-margin doodle
+│   └── fonts/                 # Locally hosted Noto fonts and license notices
+└── .nojekyll                  # Keep this file; disables Jekyll processing
+```
+
+The three HTML pages intentionally share the same header, navigation, footer, stylesheet and JavaScript. If you change shared markup (for example, the name, navigation labels or footer), check all three pages so they remain consistent.
+
+## 2. Where to make common changes
+
+| Task | File(s) to edit |
 | --- | --- |
-| 个人简介、导师链接、邮箱 | `index.html` |
-| 研究介绍、论文及项目 | `research/index.html` |
-| 想法与经济现象 | `idea/index.html` |
-| 字体、颜色、间距、导航、手机布局 | `assets/styles.css` |
-| 语言切换、页面标题与简介元信息 | `assets/main.js` |
-| 导航文字下的淡铅笔痕迹 | `assets/nav-home.svg`、`assets/nav-research.svg`、`assets/nav-idea.svg` |
-| 页面留白处的轻淡装饰 | `assets/margin-sketch.svg` |
-| 页眉圆形小头像 | `assets/avatar-crayon.webp` |
-| 浏览器页签图标 | `assets/favicon-crayon.svg`、`assets/favicon-crayon-48.png` |
-| 首页正文中的大头像 | `assets/portrait-sketch.webp` |
+| Name, short bio, email, links and Home page content | `index.html` |
+| Research interests, publications, working papers and projects | `research/index.html` |
+| Ideas, short research notes and observations | `idea/index.html` |
+| Fonts, colors, spacing, layout, navigation, responsive/mobile styles | `assets/styles.css` |
+| Language switching, remembered language, page title/description metadata | `assets/main.js` |
+| Small header avatar | `assets/avatar-crayon.webp` |
+| Larger portrait in page content | `assets/portrait-sketch.webp` |
+| Browser tab icon | `assets/favicon-crayon.svg`, `assets/favicon-crayon-48.png` |
+| Hand-drawn navigation strokes | `assets/nav-home.svg`, `assets/nav-research.svg`, `assets/nav-idea.svg` |
+| Very subtle page-margin doodle | `assets/margin-sketch.svg` |
+| Font files and license notices | `assets/fonts/` |
 
-## 改文字与增加研究内容
+**For ordinary content updates, edit the relevant HTML page only.** Avoid changing the shared CSS or JavaScript unless the requested change concerns appearance or behavior.
 
-每段正文都有英文和中文两个版本，分别使用 `lang="en"` 与 `lang="zh-CN"`。修改时保留这两个属性和原有结构，并同步更新两种语言。
+## 3. Bilingual content rules
 
-在研究页面增加内容，可以复制现有的 `<section class="article-section">`，填写标题、介绍和论文链接。新标题的 `id` 应唯一，外层 `aria-labelledby` 与它保持一致。这样既能沿用排版，也方便使用屏幕阅读器的访客浏览。
+- The site has English and Simplified Chinese versions. Text blocks use language attributes such as `lang="en"` and `lang="zh-CN"`.
+- When changing a paragraph, heading, button label or publication description, update both language versions unless the content is intentionally language-specific.
+- Preserve the existing language attributes, element classes, IDs and surrounding HTML structure. They are used by the language switcher, styles and accessibility features.
+- The language switcher remembers the visitor's choice in that browser and carries it across pages.
+- A URL can request a language explicitly: `?lang=en` or `?lang=zh`. If the URL already has a query parameter, append the language with `&lang=zh`.
+- Page titles and descriptions are also defined in `assets/main.js` (the `pages` metadata). When changing a page title or description, check the corresponding metadata as well as the HTML `<head>`.
 
-三个页面的页眉、导航和页脚各自写在 HTML 中。修改姓名、导航栏目或页脚时，请同步修改三页；日常调整颜色、尺寸和间距，只需改共享的 CSS。
+## 4. How to add a publication or project
 
-## 改外观与图片
+1. Open `research/index.html`.
+2. Find the existing publication or project section that most closely matches the new item.
+3. Copy one complete existing item/section and edit the copy. Reuse its existing classes so the new item inherits the current design.
+4. Update both English and Chinese text.
+5. Add the DOI, journal, working-paper or project link only when the exact URL is known.
+6. Keep HTML nesting valid. If you add a heading with an `id`, make sure the ID is unique and any `aria-labelledby` reference points to it.
+7. Preview the page and check that the new item follows the same spacing and typography as its neighbors.
 
-`assets/styles.css` 按页面区域分段，顶部 `:root` 集中放置常用颜色、字体和装饰透明度。先改这些变量，再按需调整对应区域，避免在文件末尾重复追加覆盖规则。手机布局单独放在媒体查询中。
+Do not invent publication status, journal names, coauthors, dates or links. If information is not confirmed, leave it out or mark it clearly as forthcoming / working paper only when that status is accurate.
 
-导航笔触衬在文字下沿，正文装饰放在留白边角；它们的形状由 SVG 决定，显示位置、大小和深浅由 CSS 控制。头像与正文插画分开管理。更换图片时如沿用原文件名，无须逐页改路径；若换了文件名，应同时更新引用。
+## 5. Design and image maintenance
 
-## 语言、字体与发布
+- `assets/styles.css` is the single shared stylesheet. It is organized by page region; common design variables are grouped near the top in `:root`.
+- Prefer editing an existing variable or relevant rule instead of appending another override at the end of the file. Avoid duplicate selectors and unexplained one-off values.
+- Mobile-specific rules are in media queries. After changing widths, spacing, font sizes or navigation, check both desktop and narrow/mobile layouts.
+- The navigation strokes are separate SVG assets placed beneath the navigation labels. The page-margin sketch is a separate, restrained decoration. Their shapes live in SVG; CSS controls their placement, size and opacity.
+- The header avatar, larger portrait and favicon are separate assets. If replacing an image, the safest method is to keep the existing filename and format. If you change a filename, update every reference in the HTML/CSS.
+- Fonts are served locally from `assets/fonts/`. Keep the accompanying copyright and license files when retaining or replacing font files. The Chinese font is a subset; a missing character may fall back to the system font.
 
-首次访问默认英文，切换语言后会在当前浏览器记住选择，跨页面继续沿用。链接加 `?lang=zh` 或 `?lang=en` 可指定语言；已有其他查询参数时用 `&lang=zh`。页面标题和简介的双语内容在 `assets/main.js` 的 `pages` 中，同时保留各 HTML `<head>` 内的初始英文信息。
+## 6. JavaScript and technical constraints
 
-字体均放在 `assets/fonts/`：英文使用 Noto Serif 的常规、粗体和斜体；中文使用 Noto Sans CJK SC 的常规、粗体子集。保留同目录的许可文件。新增汉字若不在子集中，会使用系统后备字体；需要完全一致时再扩充子集。
+- `assets/main.js` contains shared language and page-metadata behavior. Keep it small and avoid adding dependencies.
+- This is a static GitHub Pages site. Do not add server-side secrets, private API keys, database credentials or authentication tokens to HTML, CSS or JavaScript: anything shipped to the browser is public.
+- There is currently no build command, test suite or dependency installation step. Do not introduce a framework or build process just to make a small content edit.
+- Keep `.nojekyll` in the repository root.
 
-修改完成后提交到 `main`，等待 GitHub 的 **pages build and deployment** 成功。页面与资源链接中的 `v=` 用于区分缓存版本；更新样式或图片时，同步更新三页中的版本标记，避免访客继续看到旧版。上线后查看 Home、Research、Idea?，切换一次中英文，再检查手机宽度即可。
+## 7. Safe editing workflow (human or AI)
+
+1. **Inspect first.** Read this README and the exact page / asset that needs changing. Do not assume the current file structure from an old conversation.
+2. **Make the smallest relevant change.** Preserve existing page content, design, responsive behavior, bilingual structure and working links unless the task explicitly asks to change them.
+3. **Do not rewrite whole files unnecessarily.** For a content update, edit only the relevant content block. For a design update, identify the relevant CSS/SVG rules first.
+4. **Check both languages.** Confirm English and Chinese versions remain present and consistent.
+5. **Check all affected pages.** Shared header, navigation, footer, CSS and JavaScript changes may affect Home, Research and Idea?.
+6. **Check links and assets.** Verify image paths, navigation links, external URLs, unique IDs and ARIA references.
+7. **Preview before publishing.** Check desktop and mobile widths, all three pages, and both language modes.
+8. **Publish through GitHub.** Commit changes to `main`. GitHub Pages normally deploys automatically; wait for the Pages build/deployment workflow to complete successfully before considering the change live.
+9. **Verify the live site.** Open Home, Research and Idea?, switch languages, inspect images and links, and hard-refresh if an old cached asset appears.
+
+### Instructions for AI assistants
+
+When an AI assistant is asked to modify this repository, it should:
+
+- Read this README and inspect the current source before editing.
+- Treat the existing HTML/CSS/JS as the source of truth; do not reconstruct the site from screenshots or conversation summaries.
+- Preserve the current visual identity: restrained academic layout, clear typography, circular header avatar, subtle hand-drawn navigation strokes and minimal margin decoration.
+- Preserve all existing factual content unless the user explicitly requests a change.
+- Make focused, maintainable edits with clear class names and comments where useful. Do not scatter CSS overrides or create redundant files.
+- Keep English and Chinese content synchronized.
+- Report exactly which files changed, what changed, and whether deployment and live-page checks were actually completed. Never claim a deployment succeeded without checking it.
+
+## 8. Publishing and cache notes
+
+GitHub Pages publishes from the repository root on the `main` branch. After committing, check the repository's **Actions** tab for the **pages build and deployment** workflow. A successful commit does not by itself prove that the live site has finished updating.
+
+The HTML pages use version query strings (for example, `?v=...`) on local assets to help browsers refresh cached CSS, JavaScript and images. If you change an asset and users continue seeing an old version, update the relevant version query strings consistently in all pages that reference that asset. Do not change version strings without checking the corresponding references.
+
+Live site: <https://dongsheng-jia.github.io/>  
+Repository settings and deployment status: <https://github.com/dongsheng-jia/dongsheng-jia.github.io/settings/pages>  
+GitHub Pages documentation: <https://docs.github.com/en/pages>
