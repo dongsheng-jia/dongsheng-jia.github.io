@@ -386,13 +386,16 @@ h1 {
 }
 
 .article-section {
-  margin-top: 36px;
+  margin-top: 44px;
 }
 
 .article-section h2 {
-  margin: 0 0 12px;
+  margin: 0 0 18px;
+  padding-bottom: 11px;
+  border-bottom: 1px solid var(--line);
   color: var(--ink);
-  font: 400 22px/1.4 var(--serif);
+  font: 700 26px/1.35 var(--serif);
+  letter-spacing: .01em;
 }
 
 .article-section p, .article-lead {
@@ -571,11 +574,13 @@ html[lang="zh-CN"] .introduction p, html[lang="zh-CN"] .article-section p, html[
   }
 
   .article-section {
-    margin-top: 30px;
+    margin-top: 36px;
   }
 
   .article-section h2 {
-    font-size: 21px;
+    margin-bottom: 14px;
+    padding-bottom: 9px;
+    font-size: 23px;
   }
 
   .article-section p, .article-lead {
