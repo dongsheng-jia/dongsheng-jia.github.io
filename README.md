@@ -23,7 +23,7 @@ This repository contains the source files for a bilingual (English / Simplified 
 │   ├── styles.css             # Shared design system and responsive styles
 │   ├── main.js                # Language switch, page metadata and shared behavior
 │   ├── avatar-crayon.webp     # Small round header avatar
-│   ├── portrait-sketch.webp   # Larger portrait used in page content
+│   ├── portrait-sketch.webp   # Larger portrait used in page content (420 × 420 WebP, about 16 KB)
 │   ├── favicon-crayon.svg     # Browser tab icon (SVG)
 │   ├── favicon-crayon-48.png  # Browser tab icon (PNG)
 │   ├── nav-home.svg           # Subtle hand-drawn stroke under Home
