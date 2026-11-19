@@ -45,7 +45,7 @@ The three HTML pages intentionally share the same header, navigation, footer, st
 | Ideas, short research notes and observations | `idea/index.html` |
 | Fonts, colors, spacing, layout, navigation, responsive/mobile styles | `assets/styles.css` |
 | Language switching, remembered language, page title/description metadata | `assets/main.js` |
-| Small header avatar | `assets/avatar-crayon.webp` |
+| Small header avatar (256 × 256 WebP, about 10 KB) | `assets/avatar-crayon.webp` |
 | Larger portrait in page content | `assets/portrait-sketch.webp` |
 | Browser tab icon | `assets/favicon-crayon.svg`, `assets/favicon-crayon-48.png` |
 | Hand-drawn navigation strokes | `assets/nav-home.svg`, `assets/nav-research.svg`, `assets/nav-idea.svg` |
