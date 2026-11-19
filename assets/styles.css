@@ -621,6 +621,13 @@ html[lang="zh-CN"] .introduction p, html[lang="zh-CN"] .article-section p, html[
 
 }
 
+/* 窄屏时为品牌名称和语言切换保留间距。 */
+@media (max-width: 360px) {
+  .site-header { column-gap: 8px; }
+  .site-mark { gap: 6px; font-size: 18px; }
+  .site-avatar { width: 40px; height: 40px; }
+}
+
 /* 11. 打印 */
 @media print {
   .page {
