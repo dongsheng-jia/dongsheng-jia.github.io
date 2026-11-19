@@ -7,8 +7,8 @@
   const pages = {
     home: {
       titles: {
-        en: 'Dongsheng Jia | Academic Homepage',
-        'zh-CN': '贾东升 | 学术主页'
+        en: 'D. Jia',
+        'zh-CN': 'D. Jia | 学术主页'
       },
       descriptions: {
         en: 'Dongsheng Jia is a PhD student in Finance at Shanghai University of Finance and Economics.',
@@ -17,8 +17,8 @@
     },
     research: {
       titles: {
-        en: 'Dongsheng Jia | Research',
-        'zh-CN': '贾东升 | 研究'
+        en: 'D. Jia | Research',
+        'zh-CN': 'D. Jia | 研究'
       },
       descriptions: {
         en: 'Research on interfirm financial linkages, firm behavior, and macroeconomic outcomes by Dongsheng Jia.',
@@ -27,8 +27,8 @@
     },
     idea: {
       titles: {
-        en: 'Dongsheng Jia | Idea?',
-        'zh-CN': '贾东升 | Idea?'
+        en: 'D. Jia | Idea?',
+        'zh-CN': 'D. Jia | Idea?'
       },
       descriptions: {
         en: 'A few ideas and economic facts by Dongsheng Jia, open to question. Discussion and collaboration are welcome.',
