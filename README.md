@@ -23,7 +23,7 @@ This repository contains the source files for a bilingual (English / Simplified 
 │   ├── styles.css             # Shared design system and responsive styles
 │   ├── main.js                # Language switch, page metadata and shared behavior
 │   ├── avatar-crayon.webp     # Small round header avatar
-│   ├── portrait-sketch.webp   # Larger portrait used in page content (420 × 420 WebP, about 16 KB)
+│   ├── portrait-sketch.webp   # Larger portrait used in page content
 │   ├── favicon-crayon.svg     # Browser tab icon (SVG)
 │   ├── favicon-crayon-48.png  # Browser tab icon (PNG)
 │   ├── nav-home.svg           # Subtle hand-drawn stroke under Home
@@ -45,7 +45,7 @@ The three HTML pages intentionally share the same header, navigation, footer, st
 | Ideas, short research notes and observations | `idea/index.html` |
 | Fonts, colors, spacing, layout, navigation, responsive/mobile styles | `assets/styles.css` |
 | Language switching, remembered language, page title/description metadata | `assets/main.js` |
-| Small header avatar (256 × 256 WebP, about 10 KB) | `assets/avatar-crayon.webp` |
+| Small header avatar (original illustration; displayed at 56 px on desktop and 46 px on mobile) | `assets/avatar-crayon.webp` |
 | Larger portrait in page content | `assets/portrait-sketch.webp` |
 | Browser tab icon | `assets/favicon-crayon.svg`, `assets/favicon-crayon-48.png` |
 | Hand-drawn navigation strokes | `assets/nav-home.svg`, `assets/nav-research.svg`, `assets/nav-idea.svg` |
