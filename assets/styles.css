@@ -250,12 +250,14 @@ button:focus-visible, a:focus-visible {
 }
 
 .language-switch button {
-  padding: 6px;
+  padding: 8px 2px 12px;
   min-width: 36px;
   min-height: 44px;
   border: none;
   background: transparent;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
   color: var(--muted);
 }
 
@@ -536,6 +538,7 @@ html[lang="zh-CN"] .introduction p, html[lang="zh-CN"] .article-section p, html[
   .language-switch button {
     min-width: 30px;
     padding-inline: 4px;
+    font-size: 15px;
   }
 
   main {
