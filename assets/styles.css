@@ -150,6 +150,14 @@ button:focus-visible, a:focus-visible {
   gap: 28px;
 }
 
+/* 桌面页眉单独加宽，正文与页脚沿用原有阅读宽度。 */
+@media screen and (min-width: 901px) {
+  .site-header {
+    width: calc(100vw - 96px);
+    align-self: center;
+  }
+}
+
 .site-identity {
   flex: none;
 }
