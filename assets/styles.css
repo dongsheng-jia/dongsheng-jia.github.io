@@ -9,7 +9,7 @@
   --page-width: 1080px;
   --nav-pencil-opacity: .78;
   --margin-pencil-opacity: .5;
-  --serif: 'Noto Serif', 'Dongsheng Sans SC', 'PingFang SC', 'Microsoft YaHei', Georgia, serif;
+  --serif: Georgia, 'Noto Serif', 'Dongsheng Song SC', 'Songti SC', SimSun, serif;
 }
 
 /* 2. 本地字体 */
@@ -38,16 +38,16 @@
 }
 
 @font-face {
-  font-family: 'Dongsheng Sans SC';
-  src: url('fonts/noto-sans-sc-regular.woff') format('woff');
+  font-family: 'Dongsheng Song SC';
+  src: url('fonts/song-sc-regular.woff2') format('woff2');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Dongsheng Sans SC';
-  src: url('fonts/noto-sans-sc-bold.woff') format('woff');
+  font-family: 'Dongsheng Song SC';
+  src: url('fonts/song-sc-bold.woff2') format('woff2');
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -168,7 +168,7 @@ button:focus-visible, a:focus-visible {
   align-items: center;
   gap: 12px;
   color: var(--ink);
-  font: 400 22px/1.35 var(--serif);
+  font: 700 22px/1.35 var(--serif);
   letter-spacing: .01em;
   text-decoration: none;
   white-space: nowrap;
@@ -209,6 +209,7 @@ button:focus-visible, a:focus-visible {
   padding: 8px 2px 12px;
   color: #455569;
   font-size: 16px;
+  font-weight: 700;
   line-height: 1.5;
   text-decoration: none;
   white-space: nowrap;
@@ -422,6 +423,7 @@ h1 {
 /* 9. 中文排版 */
 html[lang="zh-CN"] h1 {
   font-size: 30px;
+  font-weight: 700;
   letter-spacing: 1px;
 }
 
