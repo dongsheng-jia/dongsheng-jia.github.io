@@ -159,15 +159,16 @@ button:focus-visible, a:focus-visible {
   align-items: center;
   gap: 12px;
   color: var(--ink);
-  font: 400 17px/1.4 var(--serif);
+  font: 400 22px/1.35 var(--serif);
+  letter-spacing: .01em;
   text-decoration: none;
   white-space: nowrap;
 }
 
 .site-avatar {
   display: block;
-  width: 44px;
-  height: 44px;
+  width: 56px;
+  height: 56px;
   flex: none;
   border: 0;
   border-radius: 50%;
@@ -486,12 +487,12 @@ html[lang="zh-CN"] .introduction p, html[lang="zh-CN"] .article-section p, html[
 
   .site-mark {
     gap: 9px;
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .site-avatar {
-    width: 38px;
-    height: 38px;
+    width: 46px;
+    height: 46px;
   }
 
   .header-controls {
